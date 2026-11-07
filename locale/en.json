@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Cache workspace",
+    "description": "Pick which folder inside the workspace the agent uses for scratch files, and clean it from an independent process."
+  }
+}

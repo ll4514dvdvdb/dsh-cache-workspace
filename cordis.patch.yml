@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-cache-workspace
+      name: '@local/dsh-cache-workspace'
