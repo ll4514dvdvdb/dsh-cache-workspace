@@ -6,8 +6,11 @@
 
 ## 1. 这是什么
 
-DSH 桌面客户端（Web GUI）的本地插件，在输入框工具栏「电脑操作」chip 右边加一个**缓存工作区**控件，
+DSH 桌面客户端（Web GUI）的本地插件，在输入框上方的工具行里加一个**缓存工作区**控件，
 并给每个 agent 的系统提示注入一段「## 缓存工作区」规则。
+
+> 独立插件：不依赖 computer-use / MCP 或其他 UI 插件。控件的视觉参考了 computer-use 的胶囊样式，
+> 位置只是 `order` 排序（放 41 是为了排在那类控件旁边），两者没有代码依赖。
 
 用途：让 agent 有一个专门放中间产物的地方，避免把临时文件堆进项目里；并且工作结束后能一键清理。
 
@@ -26,7 +29,7 @@ DSH 桌面客户端（Web GUI）的本地插件，在输入框工具栏「电脑
 
 已完成并在本机 `desktop` profile 运行中：
 
-- chip 注册在 `conversation.input.left`，order 41（computer-use 是 40，所以紧贴其右）。
+- chip 注册在 `conversation.input.left`（框架声明的空 list slot），order 41；**只是排序**，没装 computer-use 时它就是该 slot 的第一个。
 - 显示当前缓存文件夹名；点击名字 → 调 `uiWorkspace.pickDirectory()` 弹 Windows 资源管理器 → 选中后写回。
 - 名字右侧小箭头内嵌透明 `<select>`：列出工作区一级目录 + 当前项 + 「＋ 新建文件夹…」。
 - 最右独立清理按钮：`window.confirm` 后 POST `/clear`，host 用 **detached `cmd.exe /c rd /s /q`** 删除，对话被归档也会完成。
