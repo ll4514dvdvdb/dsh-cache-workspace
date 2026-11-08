@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Pick the scratch folder the agent may freely write in, and clean it from an independent process.",
+  "description": "Pick the scratch folder the AI assistant may freely write in, and clean it from an independent process.",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
