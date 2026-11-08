@@ -1,6 +1,12 @@
 {
   "name": "@local/dsh-cache-workspace",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "ll4514dvdvdb",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ll4514dvdvdb/dsh-cache-workspace.git"
+  },
   "private": true,
   "type": "module",
   "description": "Pick the scratch folder the AI assistant may freely write in, and clean it from an independent process.",
